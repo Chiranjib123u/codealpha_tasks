@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Image Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Visual Storytelling</p>
+        <h1>Discover a polished image gallery with elegant motion.</h1>
+        <p>
+          Browse through curated photography, filter by mood, and open any image in a cinematic lightbox.
+        </p>
+        <div class="filter-bar" role="toolbar" aria-label="Filter gallery">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="city">City</button>
+          <button class="filter-btn" data-filter="travel">Travel</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery" aria-label="Image gallery">
+        <article
+          class="card"
+          data-category="nature"
+          data-image="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+          data-title="Mountain Escape"
+          data-description="A sunrise view over misty peaks and a calm lake."
+        >
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Mountain Escape" />
+          <div class="overlay">
+            <h3>Mountain Escape</h3>
+            <p>Nature · Dawn light</p>
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-category="nature"
+          data-image="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+          data-title="Forest Path"
+          data-description="A quiet woodland trail wrapped in soft golden light."
+        >
+          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80" alt="Forest Path" />
+          <div class="overlay">
+            <h3>Forest Path</h3>
+            <p>Nature · Woodland</p>
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-category="city"
+          data-image="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=900&q=80"
+          data-title="Neon Skyline"
+          data-description="A bold city scene filled with glowing towers and motion."
+        >
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=900&q=80" alt="Neon Skyline" />
+          <div class="overlay">
+            <h3>Neon Skyline</h3>
+            <p>City · Night lights</p>
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-category="city"
+          data-image="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+          data-title="Modern Streets"
+          data-description="Clean architecture and sculpted lines in the city center."
+        >
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Modern Streets" />
+          <div class="overlay">
+            <h3>Modern Streets</h3>
+            <p>City · Architecture</p>
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-category="travel"
+          data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+          data-title="Ocean Horizon"
+          data-description="A bright coastal escape where the sea meets the sky."
+        >
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Ocean Horizon" />
+          <div class="overlay">
+            <h3>Ocean Horizon</h3>
+            <p>Travel · Beach</p>
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-category="travel"
+          data-image="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=900&q=80"
+          data-title="Desert Road"
+          data-description="Golden open roads and distant horizons in the dry season."
+        >
+          <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=900&q=80" alt="Desert Road" />
+          <div class="overlay">
+            <h3>Desert Road</h3>
+            <p>Travel · Adventure</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-panel">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button>
+        <button class="nav-btn prev" id="prevBtn" aria-label="Previous image">‹</button>
+        <img id="lightboxImage" src="" alt="" />
+        <div class="lightbox-details">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDescription"></p>
+        </div>
+        <button class="nav-btn next" id="nextBtn" aria-label="Next image">›</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
